@@ -1,0 +1,18 @@
+.card {
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.4s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card:active {
+    transform: scale(0.95) rotateZ(1.7deg);
+  }

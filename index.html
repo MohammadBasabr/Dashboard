@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>داده پردازان کوثر</title>
+    <link rel="stylesheet" href="./reset.css">
+    <!-- <link rel="stylesheet" href="./icons.css"> -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./cardStyle.css">
+    <link rel="stylesheet" href="./config.css">
+</head>
+
+<body>
+    <aside>
+        <div id="asideTrigger">
+            <button id="trigger-btn"><span class="material-icons">menu</span></button>
+            <h2>داده پردازان کوثر</h2>
+        </div>
+        <div id="info-pro">
+            <a id="profile" href="#"><img src="./image/pro.jpg" alt=""></a>
+            <h5>محمد باصبر</h5>
+            <h5>سمت:</h5><span>FrontEnd-Developer</span>
+        </div>
+        <ul id="cpanel">
+            <li><a href=""><span class="material-icons">work</span>میزکار</a></li>
+            <li><a href=""><span class="material-icons">people_alt</span>مشتریان</a></li>
+            <li><a href=""><span class="material-icons">notifications</span>اعلانات</a></li>
+            <li><a href=""><span class="material-icons">help</span>راهنما</a></li>
+            <li><a href=""><span class="material-icons">settings</span>تنظیمات</a></li>
+            <li><a href=""><span class="material-icons">admin_panel_settings</span>امنیت</a></li>
+            <li><a href=""><span class="material-icons">logout</span>خروج از حساب</a></li>
+        </ul>
+    </aside>
+    <main>
+        <section id="titlePan">
+            <h1 id="title1">میزکار</h1>
+            <div id="welcome">
+                <h6>خوش‌آمدی</h6>
+                <pre> محمد باصبر</pre>
+            </div>
+        </section>
+        <section id="amarPan">
+            <ul>
+                <li class="card"><a href="#"><span class="material-icons">visibility</span><pre>بازدید روزانه: <span>750</span></pre></a></li>
+                <li class="card"><a href="#"><span class="material-icons">shopping_basket</span><pre>تعداد فروش: <span>501</span></pre></a></li>
+                <li class="card"><a href="#"><span class="material-icons">paid</span><pre>سود خالص: <span>296</span><pre> میلیون تومان</pre></pre></a></li>
+                <li class="card"><a href="#"><span class="material-icons">handshake</span><pre>درصد بازاریاب: <span>25</span></pre></a></li>
+            </ul>
+        </section>
+        <section id="chartPan">
+            <h3 id="title2">نمودار تحلیلی</h3>
+            <!-- chart -->
+            <canvas id="myChart"></canvas>
+        </section>
+        <section id="recentPan">
+            <h3 id="title3">مشتریان اخیر</h3>
+            <ul>
+                <li class="card"><img src="./image/person1.jpg" alt="">صابر ستوده</li>
+                <li class="card"><img src="./image/person2.jpg" alt="">رضا کریمی</li>
+                <li class="card"><img src="./image/person3.jpg" alt="">زینب عقیلی</li>
+                <li class="card"><img src="./image/person4.jpg" alt="">قاسم غیور</li>
+                <li class="card"><img src="./image/person5.jpg" alt="">محمد باصبر</li>
+            </ul>
+        </section>
+    </main>
+    <!--  -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./app.js"></script>
+</body>
+
+</html>
