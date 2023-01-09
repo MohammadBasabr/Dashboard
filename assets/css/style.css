@@ -6,7 +6,7 @@
     --color-myOrange: #d26231;
     --color-myOrange-soft: #e47d50;
     --color-myYellow: #fd9937;
-    --color-card:#555;
+    --color-card: #555;
 }
 
 html {
@@ -15,32 +15,127 @@ html {
 
 body {
     background-color: var(--color-myYellow);
-    padding: 1rem 0 1rem 1rem;
-    /* height: 100vh; */
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: auto;
-    grid-template-areas:
-        "main main main main sidebar";
-    /* align-items: center; */
-    /* align-content: center; */
-    gap: 1rem 1rem;
+}
 
+/* .grid {
+    padding: 1rem 0 1rem 1rem;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;
+    grid-gap: 1rem 1rem;
+    transition: all 1s;
+} */
+
+.flex {
+    display: flex;
+    position: relative;
+    gap: 1rem;
+    padding: 1rem 0 1rem 1rem;
+    transition: all 1s;
 }
 
 aside {
-    height: 100vh;
+    grid-column: 1/2;
+    height: 97vh;
     background-color: var(--color-accent);
     border-radius: 2rem 0 0 2rem;
     position: sticky;
     top: 1rem;
-    /* padding: 2rem; */
+    width: 20rem;
     /*  */
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
     align-items: center;
+    /* جدید */
+    transition: width 0.5s ease-in-out;
 }
+
+aside::before {
+    content: "";
+    position: absolute;
+    width: 2rem;
+    height: 100%;
+    top: 0;
+    left: 100%;
+}
+
+/* .js-button { */
+/* transform: translateY(-50%) translateX(-8px); */
+/* pointer-events: none; */
+/* transition: 0.3s; */
+/* } */
+
+.sidebar-links a.active,
+.sidebar-links a:hover {
+    color: #fff;
+}
+
+.sidebar-links a .link {
+    transition: opacity 0.3s 0.2s, color 0.3s;
+}
+
+.tooltip {
+    background-color: var(--color-accent-text);
+    position: absolute;
+    left: -10rem;
+    top: 0;
+    transform: translateX(100%) translateY(-50%);
+    padding: 0 0.8rem;
+    font-size: 0.85rem;
+    display: none;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    height: 30px;
+    align-items: center;
+    border-radius: 7px;
+    box-shadow: 0 3px 10px -3px rgba(70, 46, 118, 0.3);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.tooltip span {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.tooltip span.show {
+    opacity: 1;
+}
+
+.tooltip-element:hover~.tooltip {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* When the menu shrinks */
+
+.hide {
+    transition: opacity 0.3s 0.2s;
+}
+
+body.shrink aside {
+    width: 5.4rem;
+}
+
+body.shrink .hide {
+    opacity: 0;
+    pointer-events: none;
+    transition-delay: 0s;
+}
+
+body.shrink .tooltip {
+    display: grid;
+}
+
+/*  */
+/*  */
+/*  */
 
 #asideTrigger {
     width: 90%;
@@ -117,25 +212,26 @@ aside {
 }
 
 main {
+    flex:1;
     background-color: var(--color-accent);
-    grid-column: 2/6;
-    place-self: stretch;
+    /* grid-column: 2/7; */
+    /* place-self: stretch; */
     /* height: 90vh; */
     border-radius: 2rem;
-    padding: 2rem;
+    padding: 3rem;
     /*  */
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6,1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas: "titleA titleA chartA chartA chartA chartA"
         "amarA amarA amarA recentA recentA recentA"
         ". . . recentA recentA recentA";
-    gap: 1rem;
+    grid-gap: 3rem;
 }
 
 /*  */
 #titlePan {
-    color: var(--color-accent-text);
+    color: var(--color-accent);
     background-color: var(--color-myYellow);
     border-radius: 3rem;
     /*  */
@@ -154,7 +250,7 @@ main {
 #titlePan #welcome {
     display: flex;
     flex-flow: row nowrap;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
 }
 
 /*  */
@@ -211,7 +307,7 @@ main {
     width: 100%;
     height: 100%;
     font-size: 2rem;
-    background-color:var(--color-accent);
+    background-color: var(--color-accent);
     border-radius: 3rem;
     /*  */
     display: flex;
@@ -230,9 +326,9 @@ main {
     /*  */
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    gap: 2rem;
+    grid-gap: 2rem;
 }
 
 #recentPan #title3 {
@@ -240,7 +336,7 @@ main {
     font-weight: bold;
 }
 
-#recentPan ul{
+#recentPan ul {
     width: 95%;
     color: var(--color-accent-text);
     font-size: 2rem;
@@ -250,7 +346,7 @@ main {
     gap: 1rem;
 }
 
-#recentPan li{
+#recentPan li {
     background-color: var(--color-accent-soft);
     border-radius: 6rem;
     padding: 1rem;
@@ -261,7 +357,7 @@ main {
     justify-content: space-around;
 }
 
-#recentPan img{
+#recentPan img {
     width: 10rem;
     border-radius: 50%;
 }

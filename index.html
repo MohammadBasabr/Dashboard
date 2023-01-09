@@ -14,69 +14,81 @@
 </head>
 
 <body>
-    <aside>
-        <div id="asideTrigger">
-            <button id="trigger-btn"><span class="material-icons">menu</span></button>
-            <h2>داده پردازان کوثر</h2>
-        </div>
-        <div id="info-pro">
-            <a id="profile" href="#"><img src="./image/pro.jpg" alt=""></a>
-            <h5>محمد باصبر</h5>
-            <h5>سمت:</h5><span>FrontEnd-Developer</span>
-        </div>
-        <ul id="cpanel">
-            <li><a href=""><span class="material-icons">work</span>میزکار</a></li>
-            <li><a href=""><span class="material-icons">people_alt</span>مشتریان</a></li>
-            <li><a href=""><span class="material-icons">notifications</span>اعلانات</a></li>
-            <li><a href=""><span class="material-icons">help</span>راهنما</a></li>
-            <li><a href=""><span class="material-icons">settings</span>تنظیمات</a></li>
-            <li><a href=""><span class="material-icons">admin_panel_settings</span>امنیت</a></li>
-            <li><a href=""><span class="material-icons">logout</span>خروج از حساب</a></li>
-        </ul>
-    </aside>
-    <main>
-        <section id="titlePan">
-            <h1 id="title1">میزکار</h1>
-            <div id="welcome">
-                <h6>خوش‌آمدی</h6>
-                <pre> محمد باصبر</pre>
+    <div class="flex js-grid">
+        <aside class="aside">
+            <div id="asideTrigger">
+                <button class="js-button"><span class="material-icons">menu</span></button>
+                <h2 class="hide">داده پردازان کوثر</h2>
             </div>
-        </section>
-        <section id="amarPan">
-            <ul>
-                <li class="card"><a href="#"><span class="material-icons">visibility</span>
-                        <pre>بازدید روزانه: <span>750</span></pre>
-                    </a></li>
-                <li class="card"><a href="#"><span class="material-icons">shopping_basket</span>
-                        <pre>تعداد فروش: <span>501</span></pre>
-                    </a></li>
-                <li class="card"><a href="#"><span class="material-icons">paid</span>
-                        <pre>سود خالص: <span>296</span><pre> میلیون تومان</pre>
-                        </pre>
-                    </a></li>
-                <li class="card"><a href="#"><span class="material-icons">handshake</span>
-                        <pre>درصد بازاریاب: <span>25</span></pre>
-                    </a></li>
+            <div id="info-pro" class="hide">
+                <a id="profile" href="#"><img src="./image/pro.jpg" alt=""></a>
+                <h5>محمد باصبر</h5>
+                <h5>سمت:</h5><span>FrontEnd-Developer</span>
+            </div>
+            <ul id="cpanel" class="cpanel">
+                <!-- <div class="active-tab"></div> -->
+                <li class="tooltip-element" data-tooltip="0"><a href="" class="active" data-active="0"><span class="material-icons">work</span><span class="link hide">میزکار</span></a></li>
+                <li class="tooltip-element" data-tooltip="1"><a href="" data-active="1"><span class="material-icons">people_alt</span><span class="link hide">مشتریان</span></a></li>
+                <li class="tooltip-element" data-tooltip="2"><a href="" data-active="2"><span class="material-icons">notifications</span><span class="link hide">اعلانات</span></a></li>
+                <li class="tooltip-element" data-tooltip="3"><a href="" data-active="3"><span class="material-icons">help</span><span class="link hide">راهنما</span></a></li>
+                <li class="tooltip-element" data-tooltip="4"><a href="" data-active="4"><span class="material-icons">settings</span><span class="link hide">تنظیمات</span></a></li>
+                <li class="tooltip-element" data-tooltip="5"><a href="" data-active="5"><span class="material-icons">admin_panel_settings</span><span class="link hide">امنیت</span></a></li>
+                <li class="tooltip-element" data-tooltip="6"><a href="" data-active="6"><span class="material-icons">logout</span><span class="link hide">خروج از حساب</span></a></li>
+                <div class="tooltip">
+                    <span class="show">مشتریان</span>
+                    <span>اعلانات</span>
+                    <span>راهنما</span>
+                    <span>تنظیمات</span>
+                    <span>امنیت</span>
+                    <span>خروج</span>
+                  </div>
             </ul>
-        </section>
-        <section id="chartPan">
-            <h3 id="title2">نمودار تحلیلی</h3>
-            <!-- chart -->
-            <canvas id="myChart"></canvas>
-        </section>
-        <section id="recentPan">
-            <h3 id="title3">مشتریان اخیر</h3>
-            <ul>
-                <li class="card"><img src="./image/person1.jpg" alt="">صابر ستوده</li>
-                <li class="card"><img src="./image/person2.jpg" alt="">رضا کریمی</li>
-                <li class="card"><img src="./image/person3.jpg" alt="">زینب عقیلی</li>
-                <li class="card"><img src="./image/person4.jpg" alt="">قاسم غیور</li>
-                <li class="card"><img src="./image/person5.jpg" alt="">محمد باصبر</li>
-            </ul>
-        </section>
-    </main>
+        </aside>
+        <main class="main">
+            <section id="titlePan">
+                <h1 id="title1">میزکار</h1>
+                <div id="welcome">
+                    <h6>خوش‌آمدی</h6>
+                    <pre> محمد باصبر</pre>
+                </div>
+            </section>
+            <section id="amarPan">
+                <ul>
+                    <li class="card"><a href="#"><span class="material-icons">visibility</span>
+                            <pre>بازدید روزانه: <span>750</span></pre>
+                        </a></li>
+                    <li class="card"><a href="#"><span class="material-icons">shopping_basket</span>
+                            <pre>تعداد فروش: <span>501</span></pre>
+                        </a></li>
+                    <li class="card"><a href="#"><span class="material-icons">paid</span>
+                            <pre>سود خالص: <span>296</span><pre> میلیون تومان</pre>
+                            </pre>
+                        </a></li>
+                    <li class="card"><a href="#"><span class="material-icons">handshake</span>
+                            <pre>درصد بازاریاب: <span>25</span></pre>
+                        </a></li>
+                </ul>
+            </section>
+            <section id="chartPan">
+                <h3 id="title2">نمودار تحلیلی</h3>
+                <!-- chart -->
+                <canvas id="myChart"></canvas>
+            </section>
+            <section id="recentPan">
+                <h3 id="title3">مشتریان اخیر</h3>
+                <ul>
+                    <li class="card"><img src="./image/person1.jpg" alt="">صابر ستوده</li>
+                    <li class="card"><img src="./image/person2.jpg" alt="">زیبا خدادادی</li>
+                    <li class="card"><img src="./image/person3.jpg" alt="">مسعود شایسته</li>
+                    <li class="card"><img src="./image/person4.jpg" alt="">قاسم غیور</li>
+                    <li class="card"><img src="./image/person5.jpg" alt="">گلچهره بی‌باک</li>
+                </ul>
+            </section>
+        </main>
+    </div>
     <!--  -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./assets/js/chartApp.js"></script>
     <script src="./assets/js/app.js"></script>
 </body>
 
