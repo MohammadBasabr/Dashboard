@@ -1,0 +1,47 @@
+.content .account-info{
+    flex-flow: row nowrap;
+    gap: 1rem;
+}
+
+.content .controls .ctrl-items li a{
+    font-size: 2vw;
+}
+
+.content .account-info img{
+    height: 9rem;
+}
+
+.resize-side{
+    height: 25vh;
+}
+
+.title-pan{
+    grid-row: 1/2;
+    grid-column: 2/6;
+}
+
+.chart-pan{
+    grid-row: 2/5;
+}
+
+.amar-pan{
+    grid-row: 5/8;
+}
+
+.amar-pan ul a{
+    font-size: 2.5vw;
+}
+
+.amar-pan ul a .material-icons{
+    font-size: 8vw;
+}
+
+.recents-pan{
+    grid-row: 8/13;
+}
+
+.recents-pan ul li{
+    width: 90%;
+    border-radius: 4rem;
+    font-size: 3vw;
+}
