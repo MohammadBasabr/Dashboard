@@ -17,37 +17,29 @@ body {
     background-color: var(--color-myYellow);
 }
 
-/* .grid {
-    padding: 1rem 0 1rem 1rem;
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: auto;
-    grid-gap: 1rem 1rem;
-    transition: all 1s;
-} */
-
 .flex {
+    padding: 1rem 0 1rem 1rem;
+    /* ### */
     display: flex;
     position: relative;
     gap: 1rem;
-    padding: 1rem 0 1rem 1rem;
+    /* ### */
     transition: all 1s;
 }
 
 aside {
-    grid-column: 1/2;
     height: 97vh;
     background-color: var(--color-accent);
     border-radius: 2rem 0 0 2rem;
     position: sticky;
     top: 1rem;
     width: 20rem;
-    /*  */
+    /* ### */
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-evenly;
     align-items: center;
-    /* جدید */
+    /* ### */
     transition: width 0.5s ease-in-out;
 }
 
@@ -59,12 +51,6 @@ aside::before {
     top: 0;
     left: 100%;
 }
-
-/* .js-button { */
-/* transform: translateY(-50%) translateX(-8px); */
-/* pointer-events: none; */
-/* transition: 0.3s; */
-/* } */
 
 .sidebar-links a.active,
 .sidebar-links a:hover {
@@ -119,17 +105,17 @@ aside::before {
     transition: opacity 0.3s 0.2s;
 }
 
-body.shrink aside {
+.js-grid.shrink aside {
     width: 5.4rem;
 }
 
-body.shrink .hide {
+.js-grid.shrink .hide {
     opacity: 0;
     pointer-events: none;
     transition-delay: 0s;
 }
 
-body.shrink .tooltip {
+.js-grid.shrink .tooltip {
     display: grid;
 }
 
